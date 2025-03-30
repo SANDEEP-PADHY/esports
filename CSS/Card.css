@@ -1,0 +1,183 @@
+
+.wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 0px;
+	margin: 6% auto 0;
+    width: 94%;
+    padding-right: 3%;
+    padding-left: 3%;
+}
+.v-card {
+    display: block ;
+	position: static;
+	width: 23%;
+    min-width: 130px;
+    max-width: 250px;
+	height: fit-content;
+	margin: 15px;
+	box-shadow: 0 2px 20px var(--primary-color);
+	transition: box-shadow 0.3s ease;
+	overflow: hidden;
+	background: var(--card-color);
+	border-radius: 10px;
+	transition: all 0.8s ease-in-out;
+}
+.v-card:hover {
+	transform: translateY(-10px);
+}
+.v-card .img-area {
+    justify-content: center;
+    align-items: center;
+    padding-left: 6%;
+    padding-top: 7%;
+    padding-right: 6%;
+    padding-bottom: 6%;
+	position: relative;
+	width: 88%;
+	height: 88%;
+	overflow: hidden;
+    cursor: pointer;
+}
+.v-card .img-area img {
+    width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transition: transform 0.3s ease;
+    border-radius: 8px;
+}
+.v-card .img-area:hover img {
+    transform: scale(1.1);
+}
+.h-card {
+    display: block ;
+    position: static;
+    width: 33%;
+    min-width: 300px;
+    max-width: 450px;
+    height: fit-content;
+    margin: 15px;
+    box-shadow: 0 2px 20px var(--primary-color);
+    transition: box-shadow 0.3s ease;
+    overflow: hidden;
+    background: var(--card-color);
+    border-radius: 10px;
+    transition: all 0.8s ease-in-out;
+}
+.h-card:hover {
+    transform: translateY(-10px);
+}
+
+.h-card .img-area {
+    justify-content: center;
+    align-items: center;
+    padding-left: 3%;
+    padding-top: 3%;
+    padding-right: 3%;
+    padding-bottom: 3%;
+	position: relative;
+	width: 94%;
+	height: 88%;
+	overflow: hidden;
+    cursor: pointer;
+}
+.h-card .img-area img {
+    width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transition: transform 0.3s ease;
+    border-radius: 8px;
+}
+.h-card .img-area:hover img {
+    transform: scale(1.035);
+}
+
+.info {
+    justify-content: center;
+    align-items: center;
+    padding-left: 10%;
+    padding-right: 10%;
+	width: 80%;
+	text-align: center;
+	color: var(--secondary-color);
+}
+.info .price {
+	margin: 0;
+    margin-bottom: 2%;
+	font-size: clamp(12px, 2vw, 18px);
+	font-weight: bold;
+	color: var(--ascent-color);
+}
+.h-card .buy {
+    background-color: var(--ascent-color); /* Overrides var(--secondary-color) */
+    color: var(--secondary-color); /* Ensures text is white */
+    padding: clamp(1px, 5%, 10px) clamp(2px, 10%, 20px);
+    border-radius: 4px;
+    font-size: clamp(1px, 1.5vw, 10px);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-bottom: 3%;
+    border: none;
+    font-family: var(--font-primary);
+}
+.buy {
+    background-color: var(--ascent-color); /* Overrides var(--secondary-color) */
+    color: var(--secondary-color); /* Ensures text is white */
+    padding: clamp(1px, 5%, 10px) clamp(2px, 10%, 20px);
+    border-radius: 4px;
+    font-size: clamp(1px, 1.5vw, 10px);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-bottom: 8%;
+    border: none;
+    font-family: var(--font-primary);
+}
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    width: 70%;
+    max-width: 900px;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+.modal-content img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.close:hover {
+    color: var(--ascent-color);
+}

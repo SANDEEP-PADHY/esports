@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>genzsy - Wear Your Fandom</title>
+    <meta name="description" content="Exclusive T-shirts & Posters for True Fans">
+
+    <!-- External CSS Files -->
+    <link rel="stylesheet" href="/CSS/Header.css">
+    <link rel="stylesheet" href="/CSS/Card.css">
+    <link rel="stylesheet" href="/CSS/style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <div id="header"></div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <img src="Media/banner.jpg" alt="Genzsy">
+        </div>
+    </section>
+
+    <hr class="divider">
+    <div class="center">
+        <div class="button-container">
+            <button class="btn" onclick="window.location.href='/Html/A3.html'" >A3</button>
+            <button class="btn" onclick="window.location.href='/Html/A4.html'" >A4</button>
+            <button class="btn" onclick="window.location.href='/Html/A5.html'" >A5</button>
+            <button class="btn" onclick="window.location.href='/Html/A6.html'" >A6</button>
+        </div>
+    </div>
+<!-- 
+    Discount Section
+    <section class="discount">
+        <h2>50% Off</h2>
+    </section>
+
+    <hr class="divider">
+
+    New Launch Section
+    <section class="new-launch">
+        <h2>New Launch</h2>
+        <div class="wrapper"></div>
+    </section> -->
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+    <!-- Load Header & Footer Dynamically -->
+    <script>
+        fetch("/Html/Header.html")
+          .then(response => response.text())
+          .then(data => document.getElementById("header").innerHTML = data);
+
+        fetch("/Html/Footer.html")
+          .then(response => response.text())
+          .then(data => document.getElementById("footer").innerHTML = data);
+    </script>
+
+</body>
+</html>
